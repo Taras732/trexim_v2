@@ -23,10 +23,8 @@ export default function RootLayout({
         <Header />
         <main className="pt-16 sm:pt-20">
           {children}
-                  </LanguageProvider>
-                  <LanguageProvider>
-        </main>
-        <Footer />
+        <LanguageProvider>                  <LanguageProvider>
+        </LanguageProvider>        <Footer />
       </body>
     </html>
   )
