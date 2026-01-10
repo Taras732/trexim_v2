@@ -26,24 +26,11 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 -z-10" />
 
       <div className="max-w-3xl mx-auto text-center">
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8 inline-block"
-        >
-          <span className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/50 text-slate-400 text-sm font-medium inline-flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-blue-400"></span>
-            Trusted by 200+ Logistics Leaders
-          </span>
-        </motion.div>
-
         {/* Main heading */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0 }}
           className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-white"
         >
           The{' '}
@@ -57,7 +44,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="text-lg md:text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed"
         >
           Automate 70% of routine operations. Unite shippers, carriers, and banks in one trusted digital ecosystem driven by AI.
@@ -67,7 +54,7 @@ export default function Hero() {
         <motion.form
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           onSubmit={handleSubmit}
           className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-12"
         >
