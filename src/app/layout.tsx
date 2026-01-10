@@ -1,16 +1,14 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'Trexim - AI Logistics OS',
-  description: 'Automate 70% of routine operations. Unite shippers, carriers, and banks in one trusted digital ecosystem driven by AI.',
-  keywords: 'logistics, AI, automation, supply chain',
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://trexim.ai',
-    siteName: 'Trexim.ai',
-  },
+  title: "Trexim - AI Logistics OS",
+  description: "The Neural Connect for Global Logistics",
 }
 
 export default function RootLayout({
@@ -20,8 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-slate-950 text-white font-sans antialiased">
-        {children}
+      <body className={inter.className}>
+        <Header />
+        <main className="pt-16 sm:pt-20">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   )
