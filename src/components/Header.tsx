@@ -3,6 +3,13 @@
 import { motion } from 'framer-motion'
 
 export default function Header() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -20 }}
@@ -13,9 +20,10 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <motion.div
+          <motion.button
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-2 cursor-pointer"
+            onClick={() => scrollToSection('hero')}
+            className="flex items-center gap-2 cursor-pointer bg-none border-none"
           >
             <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-blue-600 to-blue-500 flex items-center justify-center text-white font-bold text-lg">
               T
@@ -24,24 +32,24 @@ export default function Header() {
               Trexim
               <span className="text-cyan-400">.ai</span>
             </span>
-          </motion.div>
+          </motion.button>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {[
-              { name: 'Platform', href: '#' },
-              { name: 'Solutions', href: '#' },
-              { name: 'Company', href: '#' },
-              { name: 'Resources', href: '#' },
+              { name: 'Features', id: 'features' },
+              { name: 'Comparison', id: 'comparison' },
+              { name: 'Ecosystem', id: 'ecosystem' },
+              { name: 'Tools', id: 'tools' },
             ].map((item) => (
-              <motion.a
+              <motion.button
                 key={item.name}
-                href={item.href}
+                onClick={() => scrollToSection(item.id)}
                 whileHover={{ color: '#06b6d4' }}
-                className="text-slate-300 hover:text-cyan-400 transition-colors text-sm"
+                className="text-slate-300 hover:text-cyan-400 transition-colors text-sm bg-none border-none cursor-pointer"
               >
                 {item.name}
-              </motion.a>
+              </motion.button>
             ))}
           </nav>
 
@@ -50,13 +58,14 @@ export default function Header() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="text-slate-300 hover:text-white transition-colors text-sm hidden sm:block"
+              className="text-slate-300 hover:text-white transition-colors text-sm hidden sm:block bg-none border-none cursor-pointer"
             >
               Sign In
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => scrollToSection('hero')}
               className="px-6 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all"
             >
               Get Started
