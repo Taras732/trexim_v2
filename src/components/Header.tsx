@@ -37,8 +37,8 @@ export default function Header() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {[
-              { name: 'Features', id: 'features' },
               { name: 'Comparison', id: 'comparison' },
+              { name: 'Features', id: 'features' },
               { name: 'Ecosystem', id: 'ecosystem' },
               { name: 'Tools', id: 'tools' },
             ].map((item) => (
