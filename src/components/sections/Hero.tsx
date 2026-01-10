@@ -21,7 +21,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden">
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden" id="hero">
       {/* Background - simple gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 -z-10" />
 
