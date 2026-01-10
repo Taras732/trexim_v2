@@ -1,0 +1,34 @@
+{
+  "header": {
+    "comparison": "Comparison",
+    "features": "Features",
+    "ecosystem": "Ecosystem",
+    "tools": "Tools",
+    "signIn": "Sign In",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "title": "The Neural Connect for Global Logistics",
+    "subtitle": "Automate 70% of routine operations. Unite shippers, carriers, and banks in one trusted digital ecosystem driven by AI.",
+    "placeholder": "Enter business email...",
+    "cta": "Get Early Access",
+    "validation": "Please enter your email",
+    "success": "✓ Success! Check your email."
+  },
+  "comparison": {
+    "title": "Old Logistics vs Trexim World",
+    "old": "Old Logistics",
+    "trexim": "Trexim"
+  },
+  "features": {
+    "title": "Designed for Every Role",
+    "subtitle": "Whether you drive, ship, or finance, Trexim optimizes your workflow."
+  },
+  "ecosystem": {
+    "title": "Designed for Every Role",
+    "subtitle": "Whether you drive, ship, or finance, Trexim optimizes your workflow."
+  },
+  "tools": {
+    "title": "The Central Hub Modern Logistics"
+  }
+}
