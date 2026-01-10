@@ -21,11 +21,9 @@ export default function Hero() {
   }
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden bg-slate-950">
-      {/* Background gradients */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-slate-950 to-cyan-600/20 -z-10" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10" />
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden">
+      {/* Background - simple gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 -z-10" />
 
       <div className="max-w-3xl mx-auto text-center">
         {/* Badge */}
@@ -35,9 +33,9 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="mb-8 inline-block"
         >
-          <span className="px-4 py-2 rounded-full bg-slate-800/60 border border-blue-500/30 text-blue-300 text-sm font-medium inline-flex items-center gap-2">
+          <span className="px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/50 text-slate-400 text-sm font-medium inline-flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-blue-400"></span>
-            ✨ Trusted by 200+ Logistics Leaders
+            Trusted by 200+ Logistics Leaders
           </span>
         </motion.div>
 
@@ -46,14 +44,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
+          className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-white"
         >
-          <span className="text-white">The </span>
-          <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          The{' '}
+          <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Neural Connect
           </span>
-          <span className="text-white"> for </span>
-          <span className="text-white">Global Logistics</span>
+          {' '}for Global Logistics
         </motion.h1>
 
         {/* Subheading */}
@@ -72,7 +69,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           onSubmit={handleSubmit}
-          className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-12"
+          className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-12"
         >
           <input
             type="email"
@@ -80,12 +77,12 @@ export default function Hero() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="flex-1 px-5 py-4 rounded-lg bg-slate-800/80 border border-slate-700/50 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/30 transition-all"
+            className="flex-1 px-5 py-3 rounded-lg bg-slate-800/60 border border-slate-700/50 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all"
           />
           <button
             type="submit"
             disabled={isLoading}
-            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg font-semibold text-white hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 disabled:opacity-50 whitespace-nowrap"
+            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 disabled:opacity-50 whitespace-nowrap"
           >
             {isLoading ? 'Sending...' : 'Get Early Access'}
           </button>
