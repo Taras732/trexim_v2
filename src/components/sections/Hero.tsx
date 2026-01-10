@@ -1,8 +1,6 @@
 'use client'
-
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-
 export default function Hero() {
   const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -64,8 +62,6 @@ export default function Hero() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            onInvalid={(e) => (e.target as HTMLInputElement).setCustomValidity('Будь ласка, заповніть це поле')}
-            onInput={(e) => (e.target as HTMLInputElement).setCustomValidity('')}
             className="flex-1 px-5 py-3 rounded-lg bg-slate-800/60 border border-slate-700/50 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all"
           />
           <button
