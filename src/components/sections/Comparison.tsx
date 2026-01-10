@@ -39,7 +39,7 @@ export default function Comparison() {
   ]
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
+    <section  id="comparison"className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 -z-10" />
 
