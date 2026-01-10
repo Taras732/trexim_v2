@@ -17,7 +17,7 @@ export default function DesignedForEveryRole() {
   const roles: RoleCard[] = [
     {
       icon: '🚚',
-      title: 'Перевізникам',
+      title: 'Carriers',
       subtitle: 'Carriers & Drivers',
       description: 'Maximize fleet efficiency and get paid faster.',
       features: [
@@ -30,7 +30,7 @@ export default function DesignedForEveryRole() {
     },
     {
       icon: '🏢',
-      title: 'Бізнесу',
+      title: 'Businesses',
       subtitle: 'Shippers & Companies',
       description: 'Total control over your supply chain.',
       features: [
@@ -43,7 +43,7 @@ export default function DesignedForEveryRole() {
     },
     {
       icon: '🏦',
-      title: 'Партнерам',
+      title: 'Partners',
       subtitle: 'Banks, Insurance & Legal',
       description: 'Banks, Insurance & Legal partners.',
       features: [

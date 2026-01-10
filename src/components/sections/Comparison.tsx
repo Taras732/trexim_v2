@@ -67,7 +67,7 @@ export default function Comparison() {
           </h2>
         </motion.div>
 
-        {/* Cards Grid - 4 в одному ряду */}
+        {/* Cards Grid - 4 per row */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {cards.map((card, index) => (
             <motion.div
