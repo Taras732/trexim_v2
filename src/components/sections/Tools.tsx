@@ -70,7 +70,7 @@ export default function SmartLogisticsTools() {
   const currentTool = tools.find((t) => t.id === activeTool) || tools[0]
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-16 sm:py-20 overflow-hidden">
+    <section id="tools" className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-16 sm:py-20 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 -z-10" />
       <div className="absolute inset-0 overflow-hidden -z-10">
