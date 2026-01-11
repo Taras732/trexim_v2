@@ -6,7 +6,26 @@ import { useLanguage } from '@/LanguageContext'
 export default function DesignedForEveryRole() {
   const { t } = useLanguage()
 
-  const roles = []
+  const roles = [
+  {
+    icon: '🚚',
+    key: 'carriers',
+    bgGradient: 'from-slate-800 to-slate-800',
+    borderColor: 'border-slate-700',
+  },
+  {
+    icon: '🏢',
+    key: 'shippers',
+    bgGradient: 'from-purple-600 to-blue-600',
+    borderColor: 'border-purple-500',
+  },
+  {
+    icon: '🏦',
+    key: 'partners',
+    bgGradient: 'from-slate-800 to-slate-800',
+    borderColor: 'border-slate-700',
+  },
+]
 
   return (
     <section id="features" className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
