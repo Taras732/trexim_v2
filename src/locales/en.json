@@ -8,21 +8,77 @@
     "getStarted": "Get Started"
   },
   "hero": {
-    "title": "The Neural Connect for Global Logistics",
-    "subtitle": "Automate 70% of routine operations. Unite shippers, carriers, and banks in one trusted digital ecosystem driven by AI.",
+    "title": "Ukraine's First Operational Logistics Ecosystem",
+    "subtitle": "E-TTN becomes mandatory in 2026. Move from shadow to transparent digital logistics. Be among the first to shape the future.",
     "placeholder": "Enter business email...",
-    "cta": "Get Early Access",
-    "validation": "Please enter your email",
-    "success": "✓ Success! Check your email."
+    "cta": "Join Pilot Program",
+    "validation": "Please enter a valid email",
+    "success": "✓ We'll contact you within 24 hours."
   },
   "comparison": {
-    "title": "Old Logistics vs Trexim World",
-    "old": "Old Logistics",
-    "trexim": "Trexim"
+    "title": "The Ecosystem Advantage",
+    "subtitle": "Why Ukrainian logistics needs to change",
+    "cards": {
+      "ettn": {
+        "title": "E-TTN Ready",
+        "description": "Fully compliant with 2026 electronic waybill requirements. Avoid penalties, stay ahead of regulations.",
+        "badge": "Required by 2026"
+      },
+      "transparency": {
+        "title": "From Shadow to Light",
+        "description": "70% of Ukrainian logistics operates in shadow. Join the transparent digital ecosystem with verified KEP signatures.",
+        "badge": "100% Verified"
+      },
+      "standards": {
+        "title": "New Business Standards",
+        "description": "The market is changing. Join the ecosystem where all participants work by new digital standards.",
+        "badge": "Future-Ready"
+      },
+      "automation": {
+        "title": "AI Automation",
+        "description": "AI analyzes GPS, documents, and transactions in real-time. Automate 70% of routine operations.",
+        "badge": "70% Automation"
+      }
+    }
   },
   "features": {
     "title": "Designed for Every Role",
-    "subtitle": "Whether you drive, ship, or finance, Trexim optimizes your workflow."
+    "subtitle": "Whether you drive, ship, or finance, Trexim optimizes your workflow.",
+    "roles": {
+      "carriers": {
+        "title": "Carriers",
+        "subtitle": "Carriers & Drivers",
+        "description": "Work transparently, get paid faster, access fuel programs.",
+        "features": [
+          "Faster payments with verified contracts",
+          "Fuel programs and discounts",
+          "Only verified shippers",
+          "Transparent operations (exit shadow)"
+        ]
+      },
+      "shippers": {
+        "title": "Businesses",
+        "subtitle": "Shippers & Companies",
+        "description": "Automate operations, comply with E-TTN, reduce costs.",
+        "features": [
+          "70% automation of routine tasks",
+          "E-TTN compliance built-in",
+          "24/7 supply chain visibility",
+          "AI cost optimization"
+        ]
+      },
+      "partners": {
+        "title": "Partners",
+        "subtitle": "Banks, Insurance & Legal",
+        "description": "Integrated into ecosystem, access verified clients, new revenue.",
+        "features": [
+          "Access to verified clients",
+          "Minimal risk with KEP signatures",
+          "New revenue channels",
+          "Zero acquisition cost"
+        ]
+      }
+    }
   },
   "ecosystem": {
     "title": "Designed for Every Role",

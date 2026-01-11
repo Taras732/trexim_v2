@@ -21,28 +21,30 @@ const translations: Record<Language, Translations> = {
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>('en')
-  const [mounted, setMounted] = useState(false)
+  const [isInitialized, setIsInitialized] = useState(false)
 
   useEffect(() => {
-    // Load language from localStorage on mount
-    const savedLanguage = localStorage.getItem('language') as Language | null
-    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'uk')) {
-      setLanguageState(savedLanguage)
-    } else {
-      // Detect browser language
-      const browserLang = navigator.language.startsWith('uk') ? 'uk' : 'en'
-      setLanguageState(browserLang)
+    // Initialize language from localStorage or browser after hydration
+    try {
+      const saved = localStorage.getItem('language') as Language | null
+      if (saved === 'en' || saved === 'uk') {
+        setLanguageState(saved)
+      } else if (typeof navigator !== 'undefined' && navigator.language.startsWith('uk')) {
+        setLanguageState('uk')
+      }
+    } catch {
+      // fallback to default 'en'
     }
-    setMounted(true)
+    setIsInitialized(true)
   }, [])
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang)
-    localStorage.setItem('language', lang)
-  }
-
-  if (!mounted) {
-    return <>{children}</>
+    try {
+      localStorage.setItem('language', lang)
+    } catch {
+      // ignore write errors
+    }
   }
 
   return (

@@ -1,0 +1,10 @@
+# robots.txt for Trexim.ai
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://trexim.ai/sitemap.xml
+
+# Crawl-delay (optional, adjust as needed)
+Crawl-delay: 1

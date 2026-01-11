@@ -1,45 +1,44 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/LanguageContext'
 
 export default function Comparison() {
+  const { t } = useLanguage()
+
   const cards = [
     {
-      number: '70%',
-      title: 'Automation',
-      description: 'AI handles operational tasks (invoices, matching), freeing your team for strategic growth. Like a superpower for logistics.',
-      badge: 'AI Autopilot: ON',
+      icon: '📋',
+      key: 'ettn',
+      bgGradient: 'from-orange-600 to-red-600',
+      borderColor: 'border-orange-500',
+      badgeColor: 'bg-orange-500',
+    },
+    {
+      icon: '🌅',
+      key: 'transparency',
+      bgGradient: 'from-blue-600 to-cyan-600',
+      borderColor: 'border-blue-500',
+      badgeColor: 'bg-blue-500',
+    },
+    {
+      icon: '🌐',
+      key: 'standards',
+      bgGradient: 'from-green-600 to-emerald-600',
+      borderColor: 'border-green-500',
       badgeColor: 'bg-green-500',
-      bgGradient: 'from-slate-800 to-slate-800',
-      borderColor: 'border-slate-700',
     },
     {
-      icon: '🛡️',
-      title: 'Digital Integrity',
-      description: 'Access the power of 100% verified KEP signatures. Zero manipulation.',
-      button: 'Try to Fake it (Impossible)',
-      bgGradient: 'from-purple-600 to-blue-600',
+      icon: '🤖',
+      key: 'automation',
+      bgGradient: 'from-purple-600 to-violet-600',
       borderColor: 'border-purple-500',
-    },
-    {
-      icon: '⚡',
-      title: 'Instant Sync',
-      description: 'Banks & Carriers in one loop.',
-      bgGradient: 'from-slate-800 to-slate-800',
-      borderColor: 'border-slate-700',
-    },
-    {
-      icon: '⚡',
-      title: 'The New Standard for Logistics',
-      description: 'Lightweight, high-speed, and secure.',
-      button: 'Learn more →',
-      bgGradient: 'from-emerald-500 to-teal-500',
-      borderColor: 'border-emerald-400',
+      badgeColor: 'bg-purple-500',
     },
   ]
 
   return (
-    <section  id="comparison"className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
+    <section id="comparison" className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 -z-10" />
 
@@ -58,68 +57,59 @@ export default function Comparison() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold">
-            <span className="text-white">Old Logistics vs</span>
-            <br />
+          <h2 className="text-5xl md:text-6xl font-bold mb-4">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              Trexim World
+              {t.comparison.title}
             </span>
           </h2>
+          <p className="text-slate-400 text-lg md:text-xl">
+            {t.comparison.subtitle}
+          </p>
         </motion.div>
 
         {/* Cards Grid - 4 per row */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {cards.map((card, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className={`relative group rounded-3xl p-8 min-h-[380px] flex flex-col justify-between backdrop-blur-md border ${card.borderColor} bg-gradient-to-br ${card.bgGradient} overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105`}
-            >
-              {/* Background pattern */}
-              <div className="absolute inset-0 opacity-20">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1),transparent)]"></div>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {cards.map((card, index) => {
+            const cardData = t.comparison.cards[card.key]
+            return (
+              <motion.div
+                key={card.key}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative group rounded-3xl p-8 min-h-[380px] flex flex-col justify-between backdrop-blur-md border ${card.borderColor} bg-gradient-to-br ${card.bgGradient} overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105`}
+              >
+                {/* Background pattern */}
+                <div className="absolute inset-0 opacity-20">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1),transparent)]"></div>
+                </div>
 
-              <div className="relative z-10">
-                {/* Icon or Number */}
-                {card.number && (
-                  <div className="text-6xl font-bold text-white mb-2">{card.number}</div>
-                )}
-                {card.icon && (
+                <div className="relative z-10">
+                  {/* Icon */}
                   <div className="text-5xl mb-4">{card.icon}</div>
-                )}
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-4 leading-tight">
-                  {card.title}
-                </h3>
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-white mb-4 leading-tight">
+                    {cardData.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-slate-300 text-sm leading-relaxed">
-                  {card.description}
-                </p>
-              </div>
+                  {/* Description */}
+                  <p className="text-slate-100 text-sm leading-relaxed">
+                    {cardData.description}
+                  </p>
+                </div>
 
-              {/* Badge or Button */}
-              <div className="relative z-10 mt-6">
-                {card.badge && (
+                {/* Badge */}
+                <div className="relative z-10 mt-6">
                   <div className="flex items-center gap-2">
                     <div className={`w-2 h-2 rounded-full ${card.badgeColor} animate-pulse`}></div>
-                    <span className="text-xs text-slate-300">{card.badge}</span>
+                    <span className="text-xs text-slate-100 font-semibold">{cardData.badge}</span>
                   </div>
-                )}
-
-                {card.button && (
-                  <button className="mt-4 px-5 py-2 bg-white/15 hover:bg-white/25 text-white font-semibold text-sm rounded-full border border-white/20 transition-all duration-300">
-                    {card.button}
-                  </button>
-                )}
-              </div>
-            </motion.div>
-          ))}
+                </div>
+              </motion.div>
+            )
+          })}
         </div>
       </div>
     </section>
