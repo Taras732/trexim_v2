@@ -109,16 +109,13 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <SkipToContent />
-        <ErrorBoundary>
-          <LanguageProvider>
-            <Header />
-            <main className="pt-16 sm:pt-20" id="main-content" tabIndex={-1}>
-              {children}
-            </main>
-            <Footer />
-          </LanguageProvider>
-        </ErrorBoundary>
+        <Header />
+        <main className="pt-16 sm:pt-20">
+          {children}
+        </LanguageProvider>
+        <LanguageProvider>
+        </main>
+        <Footer />
       </body>
     </html>
   )
