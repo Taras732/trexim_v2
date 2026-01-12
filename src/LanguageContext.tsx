@@ -1,5 +1,5 @@
 'use client'
-import React, { createContext, useContext, useState, useEffect } from 'react'
+import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react'
 import en from '@/locales/en.json'
 import uk from '@/locales/uk.json'
 
@@ -21,38 +21,38 @@ const translations: Record<Language, Translations> = {
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>('en')
-  const [isInitialized, setIsInitialized] = useState(false)
 
   useEffect(() => {
     // Initialize language from localStorage or browser after hydration
     try {
-      const saved = localStorage.getItem('language') as Language | null
+      const saved = localStorage.getItem('language')
       if (saved === 'en' || saved === 'uk') {
-        setLanguageState(saved)
-      } else if (typeof navigator !== 'undefined' && navigator.language.startsWith('uk')) {
+        setLanguageState(saved as Language)
+      } else if (typeof navigator !== 'undefined' && navigator.language && navigator.language.startsWith('uk')) {
         setLanguageState('uk')
       }
     } catch {
       // fallback to default 'en'
     }
-    setIsInitialized(true)
   }, [])
 
-  const setLanguage = (lang: Language) => {
+  const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang)
     try {
       localStorage.setItem('language', lang)
     } catch {
       // ignore write errors
     }
-  }
+  }, [])
+
+  const value = useMemo(() => ({
+    language,
+    setLanguage,
+    t: translations[language],
+  }), [language, setLanguage])
 
   return (
-    <LanguageContext.Provider value={{
-      language,
-      setLanguage,
-      t: translations[language],
-    }}>
+    <LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   )

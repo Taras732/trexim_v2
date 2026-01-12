@@ -41,46 +41,46 @@ export default function Hero() {
 
   return (
     <section
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center px-6 py-20 pt-24 relative overflow-hidden bg-[#131311]"
       id="hero"
       aria-labelledby="hero-title"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 -z-10" />
-      <div className="max-w-3xl mx-auto text-center">
+      {/* Subtle gradient overlays */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a18] via-[#131311] to-[#0f0f0e] -z-10" />
+      <div className="absolute top-20 right-10 w-96 h-96 bg-[#f84100]/5 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#f84100]/3 rounded-full blur-3xl -z-10"></div>
+
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.h1
           id="hero-title"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0 }}
-          className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-white"
+          transition={{ duration: 0.8 }}
+          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.1] tracking-tight"
         >
-          {t.hero.title.split(' ').map((word, i) => {
-            // Highlight key words in both languages
-            const highlightWords = ['First', 'Operational', 'Ecosystem', 'Перша', 'операційна', 'екосистема', 'України']
-            if (highlightWords.includes(word)) {
-              return (
-                <span key={i} className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  {word}{' '}
-                </span>
-              )
-            }
-            return <span key={i}>{word} </span>
-          })}
+          <span className="block text-white mb-2">
+            {t.hero.title.split('AI')[0]}
+          </span>
+          <span className="block text-[#f84100]">
+            AI {t.hero.title.split('AI')[1]}
+          </span>
         </motion.h1>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-lg md:text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-lg md:text-xl text-[#f3f0fa]/80 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
           {t.hero.subtitle}
         </motion.p>
+
         <motion.form
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           onSubmit={handleSubmit}
-          className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-12"
+          className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-8"
           aria-label="Early access signup form"
         >
           <input
@@ -91,7 +91,7 @@ export default function Hero() {
               setEmail(e.target.value)
               setValidationError('')
             }}
-            className="flex-1 px-5 py-3 rounded-lg bg-slate-800/60 border border-slate-700/50 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all"
+            className="flex-1 px-6 py-4 rounded-xl bg-[#1a1a18] border-2 border-[#2a2a28] text-white placeholder-[#666] focus:outline-none focus:border-[#f84100] transition-all"
             aria-label="Email address"
             aria-required="true"
             aria-invalid={!!validationError}
@@ -100,12 +100,13 @@ export default function Hero() {
           <button
             type="submit"
             disabled={isLoading}
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 disabled:opacity-50 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+            className="px-10 py-4 bg-[#f84100] rounded-xl font-bold text-white hover:bg-[#e63900] transition-all duration-300 disabled:opacity-50 whitespace-nowrap hover:scale-[1.02] shadow-lg hover:shadow-[#f84100]/50"
             aria-label="Submit email for early access"
           >
             {isLoading ? 'Sending...' : t.hero.cta}
           </button>
         </motion.form>
+
         {validationError && (
           <motion.div
             id="email-error"

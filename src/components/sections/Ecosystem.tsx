@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { X } from 'lucide-react'
+import { useLanguage } from '@/LanguageContext'
 
 interface EcosystemNode {
   icon: string
@@ -17,6 +18,7 @@ interface EcosystemNode {
 }
 
 export default function EcosystemSection() {
+  const { t } = useLanguage()
   const [selectedNode, setSelectedNode] = useState<EcosystemNode | null>(null)
 
   const nodes: EcosystemNode[] = [
@@ -133,29 +135,20 @@ export default function EcosystemSection() {
   ]
 
   return (
-    <section id="ecosystem" className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-16 sm:py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 -z-10" />
-      <div className="absolute inset-0 overflow-hidden -z-10">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[600px] sm:h-[900px] bg-purple-600/15 rounded-full blur-3xl" />
-      </div>
-
+    <section id="ecosystem" className="relative py-16 md:py-20 px-6 bg-gradient-to-b from-white to-[#f3f0fa]">
       <div className="relative z-10 w-full max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16 sm:mb-20"
+          className="text-center mb-12"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6">
-            <span className="text-white">The Central Hub</span>
-            <br />
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              Modern Logistics
-            </span>
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-[#131311] mb-4 leading-[1.2]">
+            {t.ecosystem.title}
           </h2>
-          <p className="text-slate-400 text-sm sm:text-lg max-w-2xl mx-auto px-4">
-            Connecting every stakeholder in real-time.
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            {t.ecosystem.subtitle}
           </p>
         </motion.div>
 

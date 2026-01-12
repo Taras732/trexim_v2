@@ -9,66 +9,43 @@ export default function Comparison() {
   const cards = [
     {
       icon: '📋',
-      key: 'ettn',
-      bgGradient: 'from-orange-600 to-red-600',
-      borderColor: 'border-orange-500',
-      badgeColor: 'bg-orange-500',
+      key: 'ettn' as const,
     },
     {
-      icon: '🌅',
-      key: 'transparency',
-      bgGradient: 'from-blue-600 to-cyan-600',
-      borderColor: 'border-blue-500',
-      badgeColor: 'bg-blue-500',
-    },
-    {
-      icon: '🌐',
-      key: 'standards',
-      bgGradient: 'from-green-600 to-emerald-600',
-      borderColor: 'border-green-500',
-      badgeColor: 'bg-green-500',
+      icon: '💡',
+      key: 'transparency' as const,
     },
     {
       icon: '🤖',
-      key: 'automation',
-      bgGradient: 'from-purple-600 to-violet-600',
-      borderColor: 'border-purple-500',
-      badgeColor: 'bg-purple-500',
+      key: 'automation' as const,
+    },
+    {
+      icon: '🎯',
+      key: 'platform' as const,
     },
   ]
 
   return (
-    <section id="comparison" className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 -z-10" />
-
-      {/* Background effects */}
-      <div className="absolute inset-0 overflow-hidden -z-10">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto w-full">
+    <section id="comparison" className="relative py-16 md:py-20 px-6 bg-gradient-to-b from-[#f3f0fa] to-white">
+      <div className="max-w-7xl mx-auto">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              {t.comparison.title}
-            </span>
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-[#131311] mb-4 leading-[1.2]">
+            {t.comparison.title}
           </h2>
-          <p className="text-slate-400 text-lg md:text-xl">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             {t.comparison.subtitle}
           </p>
         </motion.div>
 
-        {/* Cards Grid - 4 per row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {cards.map((card, index) => {
             const cardData = t.comparison.cards[card.key]
             return (
@@ -78,35 +55,31 @@ export default function Comparison() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative group rounded-3xl p-8 min-h-[380px] flex flex-col justify-between backdrop-blur-md border ${card.borderColor} bg-gradient-to-br ${card.bgGradient} overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105`}
+                className="relative group p-8 rounded-2xl bg-white border-2 border-slate-200 hover:border-[#f84100] transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
               >
-                {/* Background pattern */}
-                <div className="absolute inset-0 opacity-20">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1),transparent)]"></div>
+                {/* Icon */}
+                <div className="text-5xl mb-5 group-hover:scale-110 transition-transform duration-300">
+                  {card.icon}
                 </div>
 
-                <div className="relative z-10">
-                  {/* Icon */}
-                  <div className="text-5xl mb-4">{card.icon}</div>
+                {/* Title */}
+                <h3 className="font-heading text-xl md:text-2xl font-bold text-[#131311] mb-4 leading-tight">
+                  {cardData.title}
+                </h3>
 
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-4 leading-tight">
-                    {cardData.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-slate-100 text-sm leading-relaxed">
-                    {cardData.description}
-                  </p>
-                </div>
+                {/* Description */}
+                <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                  {cardData.description}
+                </p>
 
                 {/* Badge */}
-                <div className="relative z-10 mt-6">
-                  <div className="flex items-center gap-2">
-                    <div className={`w-2 h-2 rounded-full ${card.badgeColor} animate-pulse`}></div>
-                    <span className="text-xs text-slate-100 font-semibold">{cardData.badge}</span>
-                  </div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#f84100]/10 rounded-full">
+                  <div className="w-2 h-2 rounded-full bg-[#f84100]"></div>
+                  <span className="text-xs font-bold text-[#f84100]">{cardData.badge}</span>
                 </div>
+
+                {/* Decorative element */}
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#f84100] to-transparent rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             )
           })}

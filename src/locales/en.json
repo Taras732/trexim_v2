@@ -4,87 +4,635 @@
     "features": "Features",
     "ecosystem": "Ecosystem",
     "tools": "Tools",
+    "partners": "Partners",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "about": "About",
+    "blog": "Blog",
     "signIn": "Sign In",
     "getStarted": "Get Started"
   },
   "hero": {
-    "title": "Ukraine's First Operational Logistics Ecosystem",
-    "subtitle": "E-TTN becomes mandatory in 2026. Move from shadow to transparent digital logistics. Be among the first to shape the future.",
+    "title": "Ukraine's First AI Logistics Operating System",
+    "subtitle": "Automate 70% of routine operations with AI platform. E-TTN 2026 ready. Exit shadow economy and scale.",
     "placeholder": "Enter business email...",
     "cta": "Join Pilot Program",
     "validation": "Please enter a valid email",
     "success": "✓ We'll contact you within 24 hours."
   },
   "comparison": {
-    "title": "The Ecosystem Advantage",
-    "subtitle": "Why Ukrainian logistics needs to change",
+    "title": "Why Trexim?",
+    "subtitle": "Four reasons to switch to AI operating system",
     "cards": {
       "ettn": {
-        "title": "E-TTN Ready",
-        "description": "Fully compliant with 2026 electronic waybill requirements. Avoid penalties, stay ahead of regulations.",
-        "badge": "Required by 2026"
+        "title": "E-TTN 2026 — Be Ready",
+        "description": "E-TTN becomes mandatory in 2026. Integrate now or pay penalties later.",
+        "badge": "Mandatory from 01.01.2026"
       },
       "transparency": {
-        "title": "From Shadow to Light",
-        "description": "70% of Ukrainian logistics operates in shadow. Join the transparent digital ecosystem with verified KEP signatures.",
-        "badge": "100% Verified"
-      },
-      "standards": {
-        "title": "New Business Standards",
-        "description": "The market is changing. Join the ecosystem where all participants work by new digital standards.",
-        "badge": "Future-Ready"
+        "title": "70% Shadow → 100% Transparent",
+        "description": "Exit shadow economy through verified KEP signatures and full operational transparency",
+        "badge": "State Verified"
       },
       "automation": {
-        "title": "AI Automation",
-        "description": "AI analyzes GPS, documents, and transactions in real-time. Automate 70% of routine operations.",
-        "badge": "70% Automation"
+        "title": "AI Instead of Excel",
+        "description": "AI analyzes GPS, documents and finances in real-time. Save 15+ hours per week",
+        "badge": "15+ hours saved"
+      },
+      "platform": {
+        "title": "One Platform Instead of 10+ Tools",
+        "description": "TMS + Finance + Documents + GPS + Analytics in one place",
+        "badge": "All-in-One"
       }
     }
   },
   "features": {
-    "title": "Designed for Every Role",
-    "subtitle": "Whether you drive, ship, or finance, Trexim optimizes your workflow.",
+    "title": "Who Is Trexim For?",
+    "subtitle": "Each role gets unique benefits from AI operating system",
     "roles": {
       "carriers": {
-        "title": "Carriers",
+        "title": "For Carriers & Drivers",
         "subtitle": "Carriers & Drivers",
-        "description": "Work transparently, get paid faster, access fuel programs.",
+        "description": "More trips, faster payments, less paperwork",
         "features": [
-          "Faster payments with verified contracts",
-          "Fuel programs and discounts",
-          "Only verified shippers",
-          "Transparent operations (exit shadow)"
+          "Automatic invoices and acts",
+          "Payment in 3 days instead of 30",
+          "Fuel cards with discounts",
+          "Only verified customers"
         ]
       },
       "shippers": {
-        "title": "Businesses",
+        "title": "For Shipping Companies",
         "subtitle": "Shippers & Companies",
-        "description": "Automate operations, comply with E-TTN, reduce costs.",
+        "description": "Full logistics control without extra costs",
         "features": [
-          "70% automation of routine tasks",
-          "E-TTN compliance built-in",
-          "24/7 supply chain visibility",
-          "AI cost optimization"
+          "All logistics on one screen",
+          "Automatic E-TTN and documents",
+          "AI best route selection",
+          "Save up to 30% on delivery"
         ]
       },
-      "partners": {
-        "title": "Partners",
-        "subtitle": "Banks, Insurance & Legal",
-        "description": "Integrated into ecosystem, access verified clients, new revenue.",
+      "logistics": {
+        "title": "For Logistics Companies",
+        "subtitle": "Logistics Companies",
+        "description": "Scale business with AI and automation",
         "features": [
-          "Access to verified clients",
-          "Minimal risk with KEP signatures",
-          "New revenue channels",
-          "Zero acquisition cost"
+          "Manage 100+ trucks in one place",
+          "AI route and load optimization",
+          "Integration with banks and insurance",
+          "E-TTN ready out of the box"
         ]
       }
     }
   },
   "ecosystem": {
-    "title": "Designed for Every Role",
-    "subtitle": "Whether you drive, ship, or finance, Trexim optimizes your workflow."
+    "title": "All Logistics Stakeholders in One Ecosystem",
+    "subtitle": "Click on any element to learn more"
   },
   "tools": {
     "title": "The Central Hub Modern Logistics"
+  },
+  "pricing": {
+    "hero": {
+      "title": "Pilot — Completely Free",
+      "subtitle": "Get full access to AI operating system without any financial risks"
+    },
+    "pilot": {
+      "title": "Controlled pilot without financial risks",
+      "description": "We're currently inviting partners and clients to join our pilot program absolutely free. You get full access to all platform capabilities.",
+      "features": {
+        "free": {
+          "title": "Participation without subscriptions",
+          "description": "Zero financial commitments throughout the pilot phase"
+        },
+        "support": {
+          "title": "Technical and operational support",
+          "description": "Our team helps at every implementation stage"
+        },
+        "kpi": {
+          "title": "Clear KPIs and success criteria",
+          "description": "We measure results together with you"
+        }
+      }
+    },
+    "stages": {
+      "title": "Three stages of pilot program",
+      "stage1": {
+        "number": "01",
+        "title": "Controlled pilot",
+        "duration": "Q1-Q2 2026",
+        "features": [
+          "Participation without subscriptions",
+          "Technical and operational support",
+          "Clear KPIs and success criteria"
+        ]
+      },
+      "stage2": {
+        "number": "02",
+        "title": "Launch in real market",
+        "duration": "Q3 2026",
+        "features": [
+          "Focus on operationally complex segments (grain, FMCG, e-commerce)",
+          "Real cargo flows, not test scenarios",
+          "Model scalability validation"
+        ]
+      },
+      "stage3": {
+        "number": "03",
+        "title": "Transition to commercial model",
+        "duration": "Q4 2026+",
+        "features": [
+          "Decisions based on pilot results",
+          "Flexible cooperation formats",
+          "Scaling together with ecosystem"
+        ]
+      }
+    },
+    "future": {
+      "title": "Future pricing model",
+      "description": "After the pilot, we'll transition to a commercial model based on results achieved. Terms will be discussed individually with each partner.",
+      "principles": [
+        "Transparency and predictable costs",
+        "Payment for real value and results",
+        "Flexible packages for different business types",
+        "Scaling together with your growth"
+      ]
+    },
+    "cta": {
+      "title": "Join the pilot today",
+      "button": "Get free access"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "Ready to start? Have questions? Our team is always in touch"
+    },
+    "info": {
+      "phone": {
+        "label": "Phone",
+        "value": "+380 99 009 1802"
+      },
+      "email": {
+        "label": "Email",
+        "value": "trexim.logistics@gmail.com"
+      },
+      "address": {
+        "label": "Address",
+        "value": "Таможенная пл., 1А, Одесса, Одесская область, 65000"
+      }
+    },
+    "form": {
+      "title": "Send us a message",
+      "namePlaceholder": "Full name",
+      "emailPlaceholder": "Email",
+      "phonePlaceholder": "Phone",
+      "companyPlaceholder": "Company name (optional)",
+      "messagePlaceholder": "Your message",
+      "submit": "Send",
+      "success": "✓ Thank you! We'll contact you within 24 hours.",
+      "error": "Submission error. Please try again."
+    },
+    "contact": {
+      "title": "Contact person",
+      "name": "Taras Smaliukh",
+      "position": "CTO / CPO / Co-Founder"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "We're not looking for investments, we invite you to grow with us",
+      "subtitle": "Team of experts building the future of Ukrainian logistics"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Create Ukraine's first operational logistics ecosystem where all participants work in one transparent environment with zero gray zones."
+    },
+    "values": {
+      "title": "Our Values",
+      "items": {
+        "transparency": {
+          "title": "Transparency",
+          "description": "Zero gray zones in all operations and transactions"
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "AI and automation at the core of all processes"
+        },
+        "partnership": {
+          "title": "Partnership",
+          "description": "Mutual benefit and trust with all participants"
+        },
+        "reliability": {
+          "title": "Reliability",
+          "description": "Controlled and legally protected system"
+        }
+      }
+    },
+    "team": {
+      "title": "Team",
+      "members": {
+        "andriy": {
+          "name": "Andriy Havrylenko",
+          "position": "CEO / Co-Founder",
+          "description": "Financial stability, strategic management, crisis management"
+        },
+        "taras": {
+          "name": "Taras Smaliukh",
+          "position": "CTO / CPO / Co-Founder",
+          "description": "Product architecture, digitalization, AI-matching"
+        },
+        "olena": {
+          "name": "Olena Iskizarova",
+          "position": "CMO / Co-Founder",
+          "description": "Marketing, brand strategy, PR, market analytics"
+        },
+        "iryna": {
+          "name": "Iryna Tsybulko",
+          "position": "Head of Logistics Operations",
+          "description": "Field logistics expertise, solution testing, operational data reliability"
+        },
+        "myroslava": {
+          "name": "Myroslava Harmaniuk",
+          "position": "Procedural Reliability Expert",
+          "description": "Procedural reliability, operations quality control"
+        },
+        "itua": {
+          "name": "ITUA",
+          "position": "Technical Partner",
+          "description": "Architectural consulting, QA, development scalability, code security and stability"
+        }
+      }
+    },
+    "vision": {
+      "title": "Vision for the Future",
+      "description": "By 2028, Trexim will become the standard for all Ukrainian logistics, ensuring transparency, efficiency, and integration with the European market.",
+      "stats": {
+        "companies": "25-100 companies",
+        "trips": "300-2K trips",
+        "growth": "Stable ecosystem growth"
+      }
+    },
+    "cta": {
+      "title": "Join our team or ecosystem",
+      "button": "Contact us"
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "Trexim Blog",
+      "subtitle": "Insights, news, and expert articles about the future of logistics in Ukraine"
+    },
+    "categories": {
+      "all": "All",
+      "news": "News",
+      "insights": "Insights",
+      "technology": "Technology",
+      "industry": "Industry",
+      "guides": "Guides",
+      "updates": "Updates"
+    },
+    "statuses": {
+      "draft": "Draft",
+      "published": "Published",
+      "scheduled": "Scheduled",
+      "archived": "Archived"
+    },
+    "readMore": "Read more",
+    "minuteRead": "min read",
+    "noResults": "No articles found",
+    "posts": {
+      "ettn2026": {
+        "title": "E-TTN 2026: What Business Needs to Know Now",
+        "excerpt": "From January 1, 2026, electronic waybills become mandatory. Here's how to prepare for the changes.",
+        "category": "news",
+        "date": "January 10, 2026",
+        "readTime": 5,
+        "icon": "📋",
+        "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop&q=60",
+        "content": "## What is E-TTN?\n\nElectronic Transport Document (E-TTN) is a digital document that replaces paper waybills. From January 1, 2026, it becomes mandatory for all participants in the logistics chain in Ukraine.\n\n## Why It Matters?\n\nTransitioning to E-TTN is not just digitizing documents. It's a step towards:\n- **Transparency**: all operations are recorded in a single system\n- **Time savings**: processing takes minutes instead of hours\n- **Fewer errors**: automatic form filling and data validation\n\n## How to Prepare?\n\n### 1. System Integration\nYou need to integrate your accounting system with the state E-TTN registry. Trexim provides ready-made APIs for quick integration.\n\n### 2. Staff Training\nYour drivers and logistics staff need to learn to work with the new system. We offer free training materials.\n\n### 3. Testing\nTest the system in pilot mode before the end of 2025 to avoid problems after launch.\n\n## Trexim Will Help\n\nOur platform fully supports E-TTN:\n- Automatic creation and sending\n- Electronic signature\n- Integration with 1C and other systems\n- Mobile app for drivers\n\nJoin the pilot program and be ready for 2026!"
+      },
+      "aiLogistics": {
+        "title": "How AI is Transforming Ukrainian Logistics",
+        "excerpt": "Artificial intelligence automates 70% of routine operations. Learn which processes you can optimize today.",
+        "category": "technology",
+        "date": "January 5, 2026",
+        "readTime": 7,
+        "icon": "🤖",
+        "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
+        "content": "## Revolution in Logistics\n\nArtificial intelligence is no longer the future — it's the present of Ukrainian logistics. Companies that have implemented AI solutions reduce operational costs by 40% and increase order processing speed by 3 times.\n\n## What AI Already Does?\n\n### Document Automation\n- **Document recognition**: AI instantly processes waybills, invoices and contracts\n- **Data verification**: automatic validation and error detection\n- **Classification**: smart categorization of cargo and routes\n\n### Route Optimization\nAI analyzes hundreds of factors:\n- Real-time traffic\n- Weather conditions\n- Fuel costs\n- Road conditions\n- Loading/unloading time\n\nResult: up to 30% savings on fuel and delivery time.\n\n### Demand Forecasting\nMachine learning predicts:\n- Seasonal fluctuations\n- Peak loads\n- Transport needs\n- Delay risks\n\n## Business Benefits\n\n**Speed**: order processing in seconds instead of hours\n**Accuracy**: 99% accuracy in predictions\n**Savings**: 40% cost reduction\n**Scalability**: handling any volume of orders\n\n## AI in Trexim\n\nOur platform uses advanced AI technologies:\n- Smart route planning\n- Automatic document processing\n- Predictive analytics\n- Chatbot for drivers and clients\n\nTry the demo and see for yourself!"
+      },
+      "shadowEconomy": {
+        "title": "Exiting Shadow Economy: Step-by-Step Guide",
+        "excerpt": "70% of operations in Ukrainian logistics are in the shadows. How to transition to transparent work without losses.",
+        "category": "insights",
+        "date": "December 28, 2025",
+        "readTime": 6,
+        "icon": "💡"
+      },
+      "ecosystem": {
+        "title": "Operational Ecosystem vs Fragmented Solutions",
+        "excerpt": "Why one platform is more effective than 10+ separate tools. Comparing approaches to logistics digitalization.",
+        "category": "industry",
+        "date": "December 20, 2025",
+        "readTime": 8,
+        "icon": "🔗"
+      },
+      "pilotProgram": {
+        "title": "Our Pilot Program: First Partners' Results",
+        "excerpt": "Real cases of companies that joined Trexim. Metrics, achievements, and lessons learned.",
+        "category": "news",
+        "date": "December 15, 2025",
+        "readTime": 4,
+        "icon": "🚀"
+      },
+      "futureLogistics": {
+        "title": "Logistics 2028: Forecasts and Trends",
+        "excerpt": "What the Ukrainian auto logistics market will look like in 2 years. Expert analysis from the Trexim team.",
+        "category": "insights",
+        "date": "December 10, 2025",
+        "readTime": 10,
+        "icon": "🔮"
+      }
+    }
+  },
+  "demo": {
+    "hero": {
+      "title": "Try Trexim for Free",
+      "subtitle": "Get access to pilot program and start automating your logistics today"
+    },
+    "benefits": {
+      "title": "What you'll get",
+      "items": {
+        "access": {
+          "icon": "🚀",
+          "title": "Full platform access",
+          "description": "All AI operating system features without limitations"
+        },
+        "support": {
+          "icon": "👨‍💻",
+          "title": "Personal support",
+          "description": "Our team will help at every implementation stage"
+        },
+        "free": {
+          "icon": "💎",
+          "title": "Zero financial risks",
+          "description": "Pilot program is completely free"
+        },
+        "results": {
+          "icon": "📊",
+          "title": "Measurable results",
+          "description": "Clear KPIs and reports on time and cost savings"
+        }
+      }
+    },
+    "form": {
+      "title": "Fill out participation request",
+      "namePlaceholder": "Full name",
+      "emailPlaceholder": "Email",
+      "phonePlaceholder": "Phone",
+      "companyPlaceholder": "Company name",
+      "rolePlaceholder": "Your role",
+      "roleOptions": {
+        "carrier": "Carrier",
+        "shipper": "Shipper",
+        "logistics": "Logistics Company",
+        "other": "Other"
+      },
+      "fleetPlaceholder": "Fleet size",
+      "messagePlaceholder": "Tell us about your needs (optional)",
+      "submit": "Get access",
+      "success": "✓ Thank you! We'll contact you within 24 hours to setup access.",
+      "error": "Submission error. Please try again."
+    },
+    "process": {
+      "title": "How it works",
+      "steps": {
+        "step1": {
+          "number": "01",
+          "title": "Fill out the form",
+          "description": "Tell us about your business and needs"
+        },
+        "step2": {
+          "number": "02",
+          "title": "Get access",
+          "description": "Within 24 hours we'll setup your account"
+        },
+        "step3": {
+          "number": "03",
+          "title": "Start working",
+          "description": "Our team will help with initial setup"
+        }
+      }
+    }
+  },
+  "partners": {
+    "hero": {
+      "title": "Earn Additional Revenue in Auto Logistics Market",
+      "subtitle": "New recurring clients without risks and marketing costs",
+      "cta": "Join Pilot Program",
+      "contact": "Contact Us"
+    },
+    "problems": {
+      "title": "Ukrainian logistics businesses can no longer compete relying on manual processes",
+      "cards": {
+        "shadow": {
+          "title": "Lack of transparency leads to shadow transactions",
+          "number": "01"
+        },
+        "ettn": {
+          "title": "E-TTN and EU integration forces digital transition",
+          "number": "02"
+        },
+        "fragmented": {
+          "title": "Fragmented digital solutions lead to errors",
+          "number": "03"
+        },
+        "ai": {
+          "title": "AI becomes critical component of control",
+          "number": "04"
+        }
+      }
+    },
+    "solution": {
+      "title": "Trexim — Ukraine's first operational logistics ecosystem",
+      "subtitle": "All stakeholders in one place. Zero gray zones in operations.",
+      "features": {
+        "participants": "logistics companies • carriers • business • government • strategic partners",
+        "data": "trip events • documents • transactions • GPS data • signatures • statuses",
+        "ai": "AI detects delays, violations and warns about operational risks"
+      }
+    },
+    "partnerTypes": {
+      "title": "For us, partnership means mutual benefit and trust",
+      "subtitle": "Your services are part of daily logistics operations in the ecosystem",
+      "types": {
+        "banks": {
+          "title": "Banks / Finance",
+          "icon": "🏦",
+          "benefit": "New transaction revenue from controlled logistics payments"
+        },
+        "insurance": {
+          "title": "Insurance",
+          "icon": "🛡️",
+          "benefit": "Less risk and faster payouts thanks to real data"
+        },
+        "fuel": {
+          "title": "Fuel/Gas Stations",
+          "icon": "⛽",
+          "benefit": "Guaranteed B2B flow and recurring fuel sales"
+        },
+        "edo": {
+          "title": "EDI/Digital Signature",
+          "icon": "📝",
+          "benefit": "Stable signing volume and legally protected document flow"
+        },
+        "legal": {
+          "title": "Legal Companies",
+          "icon": "⚖️",
+          "benefit": "Stable flow of cases and evidence through event logging"
+        },
+        "tech": {
+          "title": "IT/IoT/GPS/Telco",
+          "icon": "💻",
+          "benefit": "Scale services through data, APIs and joint products"
+        }
+      }
+    },
+    "benefits": {
+      "title": "Early partners get the biggest advantage",
+      "cards": {
+        "access": {
+          "title": "Access to segmented logistics direction",
+          "number": "01"
+        },
+        "growth": {
+          "title": "Revenue from first month and growth with ecosystem",
+          "number": "02"
+        },
+        "clients": {
+          "title": "Client flow without marketing and sales costs",
+          "number": "03"
+        },
+        "integration": {
+          "title": "Integration into all possible processes in one place",
+          "number": "04"
+        }
+      }
+    },
+    "market": {
+      "title": "Ukrainian cargo transportation market is transitioning from recovery to stable development",
+      "tam": {
+        "value": "370 billion UAH",
+        "label": "Total auto logistics market",
+        "description": "354.1 million tons of cargo annually"
+      },
+      "sam": {
+        "value": "160 billion UAH",
+        "label": "Available segment for digitalization"
+      },
+      "som": {
+        "value": "10 billion UAH",
+        "label": "Achievable segment for Trexim in first 2 years"
+      },
+      "stats": {
+        "transport": "36% of shipments — road transport",
+        "shadow": "70% of operations — shadow economy"
+      },
+      "note": "Scaling through API integrations with banks, fuel networks and insurance will double SOM in 2 years, reaching ≈10–12% SAM"
+    },
+    "pilot": {
+      "title": "We start with a controlled pilot",
+      "subtitle": "No risks for partners with clear path to scaling",
+      "stages": {
+        "stage1": {
+          "number": "01",
+          "title": "Controlled pilot without financial risks",
+          "features": [
+            "participation without subscriptions",
+            "technical and operational support",
+            "clear KPIs and success criteria"
+          ]
+        },
+        "stage2": {
+          "number": "02",
+          "title": "Launch in real market",
+          "features": [
+            "focus on operationally complex segments (grain, FMCG, e-commerce)",
+            "real cargo flows, not test scenarios",
+            "model scalability validation"
+          ]
+        },
+        "stage3": {
+          "number": "03",
+          "title": "Transition to commercial model",
+          "features": [
+            "decisions based on pilot results",
+            "flexible cooperation formats",
+            "scaling together with ecosystem"
+          ]
+        }
+      }
+    },
+    "cta": {
+      "title": "In 2026 you'll be in huge advantage or out of the game",
+      "subtitle": "Call today to get pilot access tomorrow",
+      "note": "We build long-term partnerships and discuss terms individually with each partner",
+      "contact": {
+        "name": "Taras Smaliukh",
+        "position": "CTO / CPO / Co-Founder",
+        "phone": "+380 99 009 1802",
+        "email": "trexim.logistics@gmail.com"
+      },
+      "form": {
+        "namePlaceholder": "Full name",
+        "emailPlaceholder": "Email",
+        "phonePlaceholder": "Phone",
+        "companyPlaceholder": "Company name",
+        "typePlaceholder": "Partner type",
+        "messagePlaceholder": "Message (optional)",
+        "submit": "Submit application",
+        "success": "✓ Thank you! We'll contact you within 24 hours.",
+        "error": "Submission error. Please try again."
+      }
+    }
+  },
+  "references": {
+    "transport": {
+      "road": "Road",
+      "rail": "Rail",
+      "sea": "Sea",
+      "air": "Air",
+      "multimodal": "Multimodal"
+    },
+    "cargo": {
+      "general": "General Cargo",
+      "container": "Container",
+      "bulk": "Bulk",
+      "liquid": "Liquid",
+      "dangerous": "Dangerous",
+      "perishable": "Perishable",
+      "oversized": "Oversized"
+    },
+    "documents": {
+      "invoice": "Invoice",
+      "packing_list": "Packing List",
+      "cmr": "CMR",
+      "bill_of_lading": "Bill of Lading",
+      "certificate": "Certificate",
+      "customs_declaration": "Customs Declaration"
+    },
+    "requestStatus": {
+      "new": "New",
+      "processing": "Processing",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "priority": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "urgent": "Urgent"
+    }
   }
 }

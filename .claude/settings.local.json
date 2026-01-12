@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where:*)",
+      "Bash(pdftotext:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)",
+      "Bash(psql:*)",
+      "Bash(docker --version:*)",
+      "Bash(npm run dev:*)"
+    ]
+  }
+}

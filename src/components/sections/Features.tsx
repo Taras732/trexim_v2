@@ -7,53 +7,43 @@ export default function DesignedForEveryRole() {
   const { t } = useLanguage()
 
   const roles = [
-  {
-    icon: '🚚',
-    key: 'carriers',
-    bgGradient: 'from-slate-800 to-slate-800',
-    borderColor: 'border-slate-700',
-  },
-  {
-    icon: '🏢',
-    key: 'shippers',
-    bgGradient: 'from-purple-600 to-blue-600',
-    borderColor: 'border-purple-500',
-  },
-  {
-    icon: '🏦',
-    key: 'partners',
-    bgGradient: 'from-slate-800 to-slate-800',
-    borderColor: 'border-slate-700',
-  },
-]
+    {
+      icon: '🚚',
+      key: 'carriers' as const,
+    },
+    {
+      icon: '🏢',
+      key: 'shippers' as const,
+    },
+    {
+      icon: '🏭',
+      key: 'logistics' as const,
+    },
+  ]
 
   return (
-    <section id="features" className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 -z-10" />
-
+    <section id="features" className="relative py-16 md:py-20 px-6 bg-[#131311]">
       {/* Background effects */}
-      <div className="absolute inset-0 overflow-hidden -z-10">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 right-10 w-96 h-96 bg-[#f84100]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#f84100]/3 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full">
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-12"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-white">Designed for</span>
-            <br />
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              Every Role
-            </span>
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-[1.2]">
+            {t.features.title}
           </h2>
+          <p className="text-lg text-[#f3f0fa]/70 max-w-2xl mx-auto">
+            {t.features.subtitle}
+          </p>
         </motion.div>
 
         {/* Role Cards */}
@@ -67,40 +57,35 @@ export default function DesignedForEveryRole() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative group rounded-3xl p-8 min-h-[450px] flex flex-col justify-between backdrop-blur-md border ${role.borderColor} bg-gradient-to-br ${role.bgGradient} overflow-hidden transition-all duration-300 hover:shadow-2xl`}
+                className="relative group p-8 rounded-2xl bg-[#1a1a18] border-2 border-[#2a2a28] hover:border-[#f84100] transition-all duration-300 hover:shadow-xl hover:shadow-[#f84100]/20"
               >
-                {/* Background pattern */}
-                <div className="absolute inset-0 opacity-20">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1),transparent)]"></div>
+                {/* Icon */}
+                <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {role.icon}
                 </div>
 
-                <div className="relative z-10">
-                  {/* Icon */}
-                  <div className="text-6xl mb-6">{role.icon}</div>
+                {/* Title */}
+                <h3 className="font-heading text-xl md:text-2xl font-bold text-white mb-4 leading-tight">
+                  {roleData.title}
+                </h3>
 
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    {roleData.title}
-                  </h3>
-                  <p className="text-sm text-slate-400 mb-4">{roleData.subtitle}</p>
+                {/* Description */}
+                <p className="text-[#f3f0fa]/70 text-sm md:text-base leading-relaxed mb-6">
+                  {roleData.description}
+                </p>
 
-                  {/* Description */}
-                  <p className="text-slate-300 text-sm leading-relaxed mb-8">
-                    {roleData.description}
-                  </p>
-
-                  {/* Features List */}
-                  <div className="space-y-3">
-                    {roleData.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center mt-0.5 flex-shrink-0">
-                          <div className="w-2 h-2 rounded-full bg-green-400"></div>
-                        </div>
-                        <span className="text-slate-300 text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
+                {/* Features List */}
+                <div className="space-y-3">
+                  {roleData.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#f84100] mt-2 flex-shrink-0"></div>
+                      <span className="text-[#f3f0fa]/80 text-sm">{feature}</span>
+                    </div>
+                  ))}
                 </div>
+
+                {/* Decorative element */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#f84100] to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             )
           })}
